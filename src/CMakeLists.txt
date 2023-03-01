@@ -7,4 +7,5 @@ target_include_directories(jlink_rtt PUBLIC RTT)
 if (JLINK_RTT_USE_SYSCALLS)
   # Compile all syscall files - their content is protected by ifdefs against using wrong ones
   target_sources(jlink_rtt PRIVATE Syscalls/SEGGER_RTT_Syscalls_GCC.c Syscalls/SEGGER_RTT_Syscalls_IAR.c Syscalls/SEGGER_RTT_Syscalls_KEIL.c Syscalls/SEGGER_RTT_Syscalls_SES.c)
+  target_link_options(jlink_rtt INTERFACE -u_write) # This makes sure that implementation from std would be ignored (i.e. when linking with nosys.spec)
 endif ()
