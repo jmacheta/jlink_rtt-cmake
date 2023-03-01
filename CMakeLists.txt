@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.21)
 project(jlink_rtt-cmake LANGUAGES C VERSION 7.68.3)
 
 option(JLINK_RTT_CMAKE_BUILD_TESTS "Forces building test cases" OFF)
-option(JLINK_RTT_USE_SYSCALLS "Provides _write and _read syscalls bound to RTT" ON)
+option(JLINK_RTT_USE_SYSCALLS "Provides _write syscall bound to RTT" ON)
 
 add_subdirectory(src)
 
