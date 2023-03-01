@@ -1,6 +1,0 @@
-[
-    {
-        "name": "STM32L476",
-        "toolchainFile": "${workspaceFolder}/tests/stm32l476_toolchain.cmake"
-    }
-]

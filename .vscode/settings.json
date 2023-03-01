@@ -1,6 +1,0 @@
-{
-    "files.associations": {
-        "segger_rtt.h": "c",
-        "segger_rtt_conf.h": "c"
-    }
-}
