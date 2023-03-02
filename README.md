@@ -42,18 +42,6 @@ set(JLINK_RTT_USE_SYSCALLS ON)
 
 before fetching library.
 
-```cmake
-cubemx_addlibrary(<path_to_ioc_file>) ## eg. C:/my_hardware.ioc, my_hardware.ioc (assuming it exists in current source dir), or simply my_hardware (.ioc file extension is assumed)
-
-# Add some application to link with.
-add_executable(my_app main.cpp) 
-
-# Link application with generated files from CubeMX. The generated library will have the same name as the .ioc file (unless you use advanced options. See API reference).
-# my_hardware target has public dependency to generated LDSCRIPT, and provides generated C defines (unless you use advanced options. See API reference again).
-target_link_libraries(my_app PRIVATE my_hardware)
-
-```
-
 ## Toolchain-dependent behaviour
 
 - When preprocessor supports __has_include command, it will look for "custom" SEGGER_RTT_Conf.h file in provided include directories. If it fails, it will fall back to sample configuration from src/Config/SEGGER_RTT_Conf.h. If preprocessor has no__has_include support, it will simply include SEGGER_RTT_Conf.h, which may fail if none is find.
