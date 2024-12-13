@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Configure
-        run: cmake --preset default
+        run: cmake --preset native
 
       - name: Build examples
         run: cmake --build --preset examples
