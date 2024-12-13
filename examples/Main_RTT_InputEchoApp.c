@@ -66,7 +66,7 @@ static char r;
 *
 *       main
 */
-void main(void) {
+int main(void) {
 
   SEGGER_RTT_WriteString(0, "SEGGER Real-Time-Terminal Sample\r\n");
   SEGGER_RTT_ConfigUpBuffer(0, NULL, NULL, 0, SEGGER_RTT_MODE_NO_BLOCK_SKIP);

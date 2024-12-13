@@ -1,0 +1,24 @@
+name: On Push
+
+on:
+  push:
+
+  workflow_dispatch:
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lukka/get-cmake@latest
+        with:
+          useLocalCache: true
+      
+      - uses: actions/checkout@v4
+
+      - name: Configure
+        run: cmake --preset default
+
+      - name: Build examples
+        run: cmake --build --preset examples
+
+

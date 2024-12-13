@@ -64,7 +64,7 @@ volatile int _Delay;
 *
 *       main
 */
-void main(void) {
+int main(void) {
   int r;
   int CancelOp;
 
